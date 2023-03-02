@@ -1,0 +1,29 @@
+
+<div id="body_liste_personnes">
+  <p>liste-personne works!</p>
+  <ol id="liste_personnes_actives">
+
+  </ol>
+  <script src="liste-personne.component.ts"></script>
+  <script>
+
+
+    let liste = document.getElementById("liste_personnes_actives");
+
+    let MartinLI = document.createElement("li");
+    let ValentinLI = document.createElement("li");
+    let Martin_text = document.createElement("p");
+
+    Martin_text.innerText = "Martin Jean, martinjean@gmail.com";
+    MartinLI.appendChild(Martin_text);
+    ValentinLI.innerText = "Valentin De Faria Rodriguez, valentindefariarodriguez@gmail.com";
+
+    console.log("Salut");
+    if (liste) {
+
+      liste.appendChild(MartinLI);
+      liste.appendChild(ValentinLI);
+    }
+  </script>
+
+</div>
