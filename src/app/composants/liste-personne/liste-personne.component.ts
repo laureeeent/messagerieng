@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Personne} from "../../models/Personne";
+import {DonneesService} from "../../services/donnees.service";
 
 @Component({
   selector: 'app-liste-personne',
@@ -7,14 +8,11 @@ import {Personne} from "../../models/Personne";
   styleUrls: ['./liste-personne.component.css']
 })
 export class ListePersonneComponent {
-    public personnes : Personne[];
 
-    constructor() {
-      let Martin : Personne = new Personne("Martin", "Jean", "martinjean@gmail.com");
-      let Valentin : Personne = new Personne("Valentin", "De Faria Rodrigues", "valentindefariarodrigues@gmail.com");
-      this.personnes = [Martin, Valentin];
-    }
-
+  public personnes : Personne[];
+  constructor ( private svc : DonneesService) {
+      this.personnes = svc.personnes;
+  }
 }
 
 
