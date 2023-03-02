@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TitreComponent } from './composants/titre/titre.component';
 import { PersonnesActivesComponent } from './composants/personnes-actives/personnes-actives.component';
-import { MessagesComponent } from './composants/messages/messages.component';
-import { NouveauMessageComponent } from './composants/nouveau-message/nouveau-message.component';
 import { ListePersonneComponent } from './composants/liste-personne/liste-personne.component';
+import { MessagesComponent} from "./composants/message_affichage/messages.component";
+import { NouveauMessageComponent } from './Composants/nouveau-message/nouveau-message.component';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,8 @@ import { ListePersonneComponent } from './composants/liste-personne/liste-person
     TitreComponent,
     PersonnesActivesComponent,
     MessagesComponent,
-    NouveauMessageComponent,
-    ListePersonneComponent
+    ListePersonneComponent,
+    NouveauMessageComponent
   ],
   imports: [
     BrowserModule

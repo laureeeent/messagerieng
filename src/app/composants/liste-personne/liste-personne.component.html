@@ -2,7 +2,7 @@
 <div id="body_liste_personnes">
   <p>liste-personne works!</p>
   <ol id="liste_personnes_actives">
-    <li *ngFor="let personne_string of persString">{{ personne_string }}</li>
+    <li style = "color : cornflowerblue" *ngFor="let personne of personnes">{{ personne.prenom }}</li>
 
   </ol>
   <script src="liste-personne.component.ts"></script>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Personne} from "../../models/Personne";
 
 @Component({
   selector: 'app-nouveau-message',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./nouveau-message.component.css']
 })
 export class NouveauMessageComponent {
+
+  //public auteur : Personne;
+  //public msg : string;
+
+  constructor() {
+
+  }
 
 }
