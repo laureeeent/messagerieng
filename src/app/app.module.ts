@@ -7,6 +7,8 @@ import { PersonnesActivesComponent } from './composants/personnes-actives/person
 import { ListePersonneComponent } from './composants/liste-personne/liste-personne.component';
 import { MessagesComponent} from "./composants/message_affichage/messages.component";
 import { NouveauMessageComponent } from './Composants/nouveau-message/nouveau-message.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,9 +19,12 @@ import { NouveauMessageComponent } from './Composants/nouveau-message/nouveau-me
     ListePersonneComponent,
     NouveauMessageComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+      BrowserModule,
+      ReactiveFormsModule,
+      FormsModule,
+      HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,7 +4,7 @@ export class Personne{
   private _email : string;
 
 
-  constructor(prenom: string, nom: string, email: string) {
+  constructor(prenom: string = "", nom: string = "", email: string = "") {
     this._nom = nom;
     this._prenom = prenom;
     this._email = email;

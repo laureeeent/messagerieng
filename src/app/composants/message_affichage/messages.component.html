@@ -3,7 +3,7 @@
     <h2>Messages : </h2>
 
       <div *ngFor="let msg of messages">
-        <fieldset>
+        <fieldset style="color : black">
           <legend> <span style = "color : darkcyan"> {{msg.auteur.prenom}}</span> <span> a écrit le ... :</span></legend>
           <div>   " {{msg.contenu}}  "</div> <br>
         </fieldset>

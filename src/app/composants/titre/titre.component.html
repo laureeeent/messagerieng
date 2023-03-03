@@ -1,1 +1,4 @@
-<h1 id="titre">Messagerie</h1>
+<h1 id="titre">{{titre}}</h1>
+<div *ngIf="commetuveux$ | async as commetuveux">
+  {{commetuveux.value}}
+</div>

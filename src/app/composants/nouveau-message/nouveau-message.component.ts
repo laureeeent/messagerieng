@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Personne} from "../../models/Personne";
+import {Message} from "../../models/Message";
+import {DonneesService} from "../../services/donnees.service";
 
 @Component({
   selector: 'app-nouveau-message',
@@ -8,11 +10,26 @@ import {Personne} from "../../models/Personne";
 })
 export class NouveauMessageComponent {
 
-  //public auteur : Personne;
-  //public msg : string;
+  public auteur : Personne;
+  public destinataire : Personne;
+  public contenu : string;
+  public msg : Message;
+  nouveauMessageForm: any;
 
-  constructor() {
-
+  constructor(private svc : DonneesService) {
+    this.auteur = new Personne();
+    this.destinataire = new Personne();
+    this.contenu = "";
+    this.msg = new Message(this.auteur, this.destinataire, "");
   }
 
+  ajouterMsg(value: any) {
+    console.log(value.auteur);
+    console.log(value.contenu);
+    let auteur = new Personne(value.auteur);
+    let destinataire = new Personne();
+    let nouveau_message = new Message(auteur, destinataire, value.contenu);
+    this.svc.personnes.push(auteur);
+    this.svc.messages.push(nouveau_message);
+  }
 }

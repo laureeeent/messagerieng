@@ -1,8 +1,15 @@
-<p>Nouveau message</p>
-<label> De : </label> <br>
+<p> Nouveau message :</p>
 
 
+<form #form="ngForm">
+  <label> De : </label> <br>
+  <input type="text" name="auteur" ngModel/> <br> <br>
 
+  <label> Message : </label> <br>
+  <textarea name="contenu" ngModel></textarea> <br> <br>
 
-<label> Message : </label> <br>
+  <button type="submit" (click)="ajouterMsg(form.value)">valider</button>
+  <button type="submit">Annuler</button>
+</form>
+
 
