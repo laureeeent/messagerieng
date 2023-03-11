@@ -29,7 +29,6 @@ export class NouveauMessageComponent {
     let auteur = new Personne(value.auteur);
     let destinataire = new Personne();
     let nouveau_message = new Message(auteur, destinataire, value.contenu);
-    this.svc.personnes.push(auteur);
-    this.svc.messages.push(nouveau_message);
+    this.svc.pushPersonneMessage(auteur, nouveau_message);
   }
 }

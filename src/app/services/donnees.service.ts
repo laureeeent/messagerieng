@@ -29,6 +29,25 @@ export class DonneesService {
     return this._personnes;
   }
 
+  public isPersonneActive(pers : Personne) : boolean {
+    let res : boolean = false;
+
+    for ( let personne of this._personnes ) {
+      if (personne.prenom === pers.prenom) {
+        res = true;
+      }
+    }
+    return res;
+  }
+
+  public pushPersonneMessage(pers : Personne, msg : Message) : void {
+    if( ! this.isPersonneActive(pers)) {
+      this._personnes.push(pers);
+    }
+    this._messages.push(msg);
+  }
+
+
   get messages() : Message[] {
     return this._messages;
   }
